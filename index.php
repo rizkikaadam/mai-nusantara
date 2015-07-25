@@ -36,7 +36,7 @@
 <div class="wrapper row2">
   <nav id="topnav">
     <ul class="clear">
-      <li class="active" alt="halaman hone website"><a href="index.html" title="Halaman Home Website">Home</a></li>
+      <li class="active" alt="halaman hone website"><a href="index.php" title="Halaman Home Website">Home</a></li>
       <li><a class="drop" href="#" title="Pages">TKIMAI</a>
         <ul>
           <li><a href="pages/full-width-content.html" title="Konsideren">Konsideren</a></li>
@@ -53,7 +53,7 @@
           <li class="last-child"><a href="elements/pricing-tables.html" title="Profil Arsitektur">Profil Arsitektur</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="#" title="Portfolio Layouts">PENELITIAN</a>
+      <li><a class="drop" href="?blog=blog-awal&menu=penelitian" title="Portfolio Layouts">PENELITIAN</a>
         <ul>
           <li><a href="portfolio-layouts/portfolio-overview-full-width-content.html" title="Tugas Akhir">Tugas Akhir</a></li>
           <li><a href="portfolio-layouts/portfolio-overview-full-width-content.html" title="Skripsi">Skripsi</a></li>
@@ -61,7 +61,7 @@
           <li class="last-child"><a href="portfolio-layouts/portfolio-overview-4columns.html" title="Arsitektur Nusantara">Arsitektur Nusantara</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="#" title="Gallery Layouts">PENGABDIAN MASYARAKAT</a>
+      <li><a class="drop" href="?blog=blog-awal&menu=pengabdian-masyarakat" title="Gallery Layouts">PENGABDIAN MASYARAKAT</a>
         <ul>
           <li><a href="gallery-layouts/gallery-full-width-content.html" title="Klinik Arsitektur">Klinik Arsitektur</a></li>
           <li><a href="gallery-layouts/gallery-full-width-content.html" title="Arsitektur Tanggap Bencana">Arsitektur Tanggap Bencana</a></li>
@@ -69,7 +69,7 @@
         </ul>
       </li>
       <li><a href="#" title="Bursa Arsitektur">BURSA ARSITEKTUR</a></li>
-      <li><a href="#" title="Berita">BERITA</a></li>
+      <li><a href="?blog=blog-awal&menu=berita" title="Berita">BERITA</a></li>
     </ul>
   </nav>
 </div>
@@ -96,7 +96,15 @@
       </div>-->
       <!-- //////////********** ^^^^^^^^^ awal untuk content di tengah ^^^^^^^^^^ *********////////// -->
       <?php
-        include "gallery-awal.php";
+        $blog=$_GET['blog'];
+        $menu=$_GET['menu'];
+        
+        // awal pilihan menu
+        if (($blog=="blog-awal") or ($blog==""))
+        {
+            include "blog-awal.php";
+        }
+        // akhir pilihan menu
       ?> 
       <!-- //////////********** ^^^^^^^^^ akhir untuk content di tengah ^^^^^^^^^^ *********////////// -->
       <!-- ################################################################################################ -->
