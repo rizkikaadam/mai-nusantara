@@ -4,7 +4,7 @@
             <figure>
               <h2>Galeri Kumpulan Kegiatan</h2>
               <ul class="clear">
-                <li class="one_fifth first"><a href="#"><img src="images/demo/gallery.gif" alt=""></a></li>
+                <li class="one_fifth first"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/gallery.gif" alt=""></a></li>
                 <li class="one_fifth"><a href="#"><img src="images/demo/gallery.gif" alt=""></a></li>
                 <li class="one_fifth"><a href="#"><img src="images/demo/gallery.gif" alt=""></a></li>
                 <li class="one_fifth"><a href="#"><img src="images/demo/gallery.gif" alt=""></a></li>

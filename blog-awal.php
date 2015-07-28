@@ -61,6 +61,7 @@ $menu=$_GET['menu'];
                     </header>
 					<p class="nospace">deskripsi</p>
 				</article>
+                <div class="divider2"></div>
                 <!-- ######################################################### awal pagination ####################################### -->
                     <nav class="pagination">
                         <ul>

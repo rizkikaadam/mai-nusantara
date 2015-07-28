@@ -13,10 +13,10 @@ $menu=$_GET['menu'];
 					<h2 class="font-medium nospace"><a href="#">Headline Text</a></h2>
 					<p class="nospace">Integer imperdiet vestibulum leo ut tincidunt in sagittis.</p>
 				</article>
+                <div class="divider2"></div>
 			</div>
 		  </div>
       <!-- ######################################################### akhir list terbaru ####################################### -->
-		</div>
         <!-- #### -->
         <div class="clear"></div>
         <!-- ############################################akhir content di tengah#################################################### -->

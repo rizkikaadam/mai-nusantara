@@ -42,7 +42,7 @@
           <li><a href="pages/full-width-content.html" title="Konsideren">Konsideren</a></li>
           <li><a href="pages/full-width-content.html" title="Peserta">Peserta</a></li>
           <li><a href="pages/full-width-content.html" title="Kegiatan">Kegiatan</a></li>
-		  <li class="last-child"><a href="pages/full-width-content.html" title="Galeri">Galeri</a></li>
+		  <li class="last-child"><a href="?blog=gallery" title="Galeri">Galeri</a></li>
         </ul>
       </li>
       <li><a class="drop" href="#" title="Elements">PENDIDIKAN</a>
@@ -98,11 +98,20 @@
       <?php
         $blog=$_GET['blog'];
         $menu=$_GET['menu'];
+        $isi=$_GET['isi'];
         
         // awal pilihan menu
-        if (($blog=="blog-awal") or ($blog==""))
+        if ((($blog=="blog-awal") or ($blog=="")) and ($isi==""))
         {
             include "blog-awal.php";
+        }
+        else if(($blog=="gallery") and ($isi==""))
+        {
+            include "gallery-awal.php";
+        }
+        else if(($blog=="") and ($isi=="gallery-isi"))
+        {
+            include "gallery-isi.php";
         }
         // akhir pilihan menu
       ?> 
@@ -222,19 +231,19 @@
     <div class="one_quarter">
       <h2 class="footer_title">Latest Gallery</h2>
       <ul id="ft_gallery" class="nospace spacing clear">
+        <li class="one_third first"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
         <li class="one_third first"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third first"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third first"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
-        <li class="one_third"><a href="#"><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third first"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
+        <li class="one_third"><a href="?isi=gallery-isi&nama-kegiatan="><img src="images/demo/80x80.gif" alt=""></a></li>
       </ul>
     </div>
     <div class="one_quarter">
-      <h2 class="footer_title">From Twitter</h2>
+      <h2 class="footer_title">List Kegiatan</h2>
       <div class="tweet-container">
         <ul class="list none">
           <li><strong>@<a href="#">name</a></strong> <span class="tweet_text">RT <span class="at">@</span><a href="#">name</a> Donec suscipit vehicula turpis sed lutpat Quisque vitae quam neque.</span> <span class="tweet_time"><a href="#">about 9 hours ago</a></span></li>
@@ -244,7 +253,7 @@
       </div>
     </div>
     <div class="one_quarter">
-      <h2 class="footer_title">Contact Us</h2>
+      <h2 class="footer_title">Login Admin</h2>
       <form class="rnd5" action="#" method="post">
         <div class="form-input clear">
           <label for="ft_author">Name <span class="required">*</span><br>

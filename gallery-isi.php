@@ -2,7 +2,7 @@
     <div id="gallery">
           <section>
             <figure>
-              <h2>Gallery Title Goes Here</h2>
+              <h2>Galeri Foto Kegiatan <?php echo "nama_kegiatan"; ?></h2>
               <ul class="clear">
                 <li class="one_half first"><a href="#"><img src="images/demo/gallery.gif" alt=""></a>
                     <figcaption>
