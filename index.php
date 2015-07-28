@@ -39,33 +39,33 @@
       <li class="active" alt="halaman hone website"><a href="index.php" title="Halaman Home Website">Home</a></li>
       <li><a class="drop" href="#" title="Pages">TKIMAI</a>
         <ul>
-          <li><a href="pages/full-width-content.html" title="Konsideren">Konsideren</a></li>
+          <li><a href="?blog=list-pdf&menu=konsideren" title="Konsideren">Konsideren</a></li>
           <li><a href="?blog=list-univ" title="Peserta">Peserta</a></li>
-          <li><a href="pages/full-width-content.html" title="Kegiatan">Kegiatan</a></li>
+          <li><a href="?blog=list-pdf-2&menu=kegiatan" title="Kegiatan">Kegiatan</a></li>
 		  <li class="last-child"><a href="?blog=gallery" title="Galeri">Galeri</a></li>
         </ul>
       </li>
       <li><a class="drop" href="#" title="Elements">PENDIDIKAN</a>
         <ul>
-          <li><a href="elements/toggles.html" title="Teori Arsitektur">Teori Arsitektur</a></li>
-          <li><a href="elements/toggles.html" title="Sejarah Arsitektur">Sejarah Arsitektur</a></li>
-          <li><a href="elements/toggles.html" title="Modul Perkuliahan">Modul Perkuliahan</a></li>
-          <li class="last-child"><a href="elements/pricing-tables.html" title="Profil Arsitektur">Profil Arsitektur</a></li>
+          <li><a href="?blog=list-pdf&menu=teori%20arsitektur" title="Teori Arsitektur">Teori Arsitektur</a></li>
+          <li><a href="?blog=list-pdf&menu=sejarah%20arsitektur" title="Sejarah Arsitektur">Sejarah Arsitektur</a></li>
+          <li><a href="?blog=list-pdf&menu=modul%20perkuliahan" title="Modul Perkuliahan">Modul Perkuliahan</a></li>
+          <li class="last-child"><a href="?blog=list-pdf&menu=profil%20arsitektur" title="Profil Arsitektur">Profil Arsitektur</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="?blog=blog-awal&menu=penelitian" title="Portfolio Layouts">PENELITIAN</a>
+      <li><a class="drop" href="#" title="Portfolio Layouts">PENELITIAN</a>
         <ul>
-          <li><a href="portfolio-layouts/portfolio-overview-full-width-content.html" title="Tugas Akhir">Tugas Akhir</a></li>
-          <li><a href="portfolio-layouts/portfolio-overview-full-width-content.html" title="Skripsi">Skripsi</a></li>
-          <li><a href="portfolio-layouts/portfolio-overview-full-width-content.html" title="Artikel">Artikel</a></li>
-          <li class="last-child"><a href="portfolio-layouts/portfolio-overview-4columns.html" title="Arsitektur Nusantara">Arsitektur Nusantara</a></li>
+          <li><a href="?blog=list-pdf-2&menu=tugas%20akhir" title="Tugas Akhir">Tugas Akhir</a></li>
+          <li><a href="?blog=list-pdf-2&menu=skripsi" title="Skripsi">Skripsi</a></li>
+          <li><a href="?blog=list-pdf-2&menu=artikel" title="Artikel">Artikel</a></li>
+          <li class="last-child"><a href="?blog=list-pdf-2&menu=teori%20arsitektur" title="Arsitektur Nusantara">Arsitektur Nusantara</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="?blog=blog-awal&menu=pengabdian-masyarakat" title="Gallery Layouts">PENGABDIAN MASYARAKAT</a>
+      <li><a class="drop" href="#" title="Gallery Layouts">PENGABDIAN MASYARAKAT</a>
         <ul>
-          <li><a href="gallery-layouts/gallery-full-width-content.html" title="Klinik Arsitektur">Klinik Arsitektur</a></li>
-          <li><a href="gallery-layouts/gallery-full-width-content.html" title="Arsitektur Tanggap Bencana">Arsitektur Tanggap Bencana</a></li>
-          <li class="last-child"><a href="gallery-layouts/gallery-5columns.html" title="Kampung Binaan">Kampung Binaan</a></li>
+          <li><a href="?blog=list-pdf-2&menu=klinik%20arsitektur" title="Klinik Arsitektur">Klinik Arsitektur</a></li>
+          <li><a href="?blog=list-pdf-2&menu=arsitektur%20tanggap%20bencana" title="Arsitektur Tanggap Bencana">Arsitektur Tanggap Bencana</a></li>
+          <li class="last-child"><a href="?blog=list-pdf-2&menu=kampung%20binaan" title="Kampung Binaan">Kampung Binaan</a></li>
         </ul>
       </li>
       <li><a href="#" title="Bursa Arsitektur">BURSA ARSITEKTUR</a></li>
@@ -103,7 +103,7 @@
         // awal pilihan menu
         if ((($blog=="blog-awal") or ($blog=="")) and ($isi==""))
         {
-            include "list-pdf.php";
+            include "blog-awal.php";
         }
         else if(($blog=="gallery") and ($isi==""))
         {
@@ -113,6 +113,14 @@
         {
             include "list-univ.php";
         }
+        else if(($blog=="list-pdf") and ($isi==""))
+        {
+            include "list-pdf.php";
+        }
+        else if(($blog=="list-pdf-2") and ($isi==""))
+        {
+            include "list-pdf-2.php";
+        }
         else if(($blog=="") and ($isi=="profil"))
         {
             include "profile.php";
@@ -120,6 +128,10 @@
         else if(($blog=="") and ($isi=="gallery-isi"))
         {
             include "gallery-isi.php";
+        }
+        else if(($blog=="") and ($isi=="detail-pdf"))
+        {
+            include "detail-pdf.php";
         }
 
         // akhir pilihan menu

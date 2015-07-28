@@ -13,39 +13,12 @@ $menu=$_GET['menu'];
     
         <!-- ## tabel ## -->
             <section>
-              <table>
-                <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Daftar</th>
-                    <?php
-                        if($menu!="sejarah arsitektur")
-                        {
-                            echo"<th><span class='icon-download-alt icon-large'></span></th>";
-                        }
-                      
-                    ?>      
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="light">
-                    <td>1</td>
-                    <td>
                         <article class="clear push20">
                             <div class="imgl"><img src="images/demo/80x80.gif" alt=""></div>
                             <h2 class="nospace"><a href="?isi=detail-pdf&menu=<?php echo"$menu";?>&id=id">JUDUL</a></h2>
                             <p>Deskripsi singkat ... <a href="?blog=detail-pdf">Read More &raquo;</a></p>
+                            <div class="divider2"></div>
                         </article>
-                    </td>
-                    <?php  
-                        if($menu!="sejarah arsitektur")
-                        {
-                            echo"<td><a href=''><span class='icon-download-alt icon-2x'></span>&nbsp;Download</a></td>  ";
-                        }
-                    ?>    
-                  </tr>
-                </tbody>
-              </table>
             </section>
         <!-- ## tabel ## -->
         <!-- ######################################################### awal pagination ####################################### -->
