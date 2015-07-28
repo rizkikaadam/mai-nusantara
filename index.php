@@ -40,7 +40,7 @@
       <li><a class="drop" href="#" title="Pages">TKIMAI</a>
         <ul>
           <li><a href="pages/full-width-content.html" title="Konsideren">Konsideren</a></li>
-          <li><a href="pages/full-width-content.html" title="Peserta">Peserta</a></li>
+          <li><a href="?blog=list-univ" title="Peserta">Peserta</a></li>
           <li><a href="pages/full-width-content.html" title="Kegiatan">Kegiatan</a></li>
 		  <li class="last-child"><a href="?blog=gallery" title="Galeri">Galeri</a></li>
         </ul>
@@ -103,16 +103,25 @@
         // awal pilihan menu
         if ((($blog=="blog-awal") or ($blog=="")) and ($isi==""))
         {
-            include "blog-awal.php";
+            include "list-pdf.php";
         }
         else if(($blog=="gallery") and ($isi==""))
         {
             include "gallery-awal.php";
         }
+        else if(($blog=="list-univ") and ($isi==""))
+        {
+            include "list-univ.php";
+        }
+        else if(($blog=="") and ($isi=="profil"))
+        {
+            include "profile.php";
+        }
         else if(($blog=="") and ($isi=="gallery-isi"))
         {
             include "gallery-isi.php";
         }
+
         // akhir pilihan menu
       ?> 
       <!-- //////////********** ^^^^^^^^^ akhir untuk content di tengah ^^^^^^^^^^ *********////////// -->

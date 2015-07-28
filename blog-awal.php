@@ -59,7 +59,7 @@ $menu=$_GET['menu'];
                         </ul>
                       </div>
                     </header>
-					<p class="nospace">deskripsi</p>
+					<p>Deskripsi singkat ... <a href="#">Read More &raquo;</a></p>
 				</article>
                 <div class="divider2"></div>
                 <!-- ######################################################### awal pagination ####################################### -->
