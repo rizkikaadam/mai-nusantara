@@ -6,9 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="layout/styles/main.css" rel="stylesheet" type="text/css" media="all">
 <link href="layout/styles/mediaqueries.css" rel="stylesheet" type="text/css" media="all">
-<!--[if lt IE 9]><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-<link rel="stylesheet" href="Bootstrap-Image-Gallery-master/css/bootstrap-image-gallery.min.css">
 <!--[if lt IE 9]>
 <link href="layout/styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
 <script src="layout/scripts/ie/css3-mediaqueries.min.js"></script>
@@ -68,7 +65,7 @@
           <li class="last-child"><a href="?blog=list-pdf-2&menu=kampung%20binaan" title="Kampung Binaan">Kampung Binaan</a></li>
         </ul>
       </li>
-      <li><a href="#" title="Bursa Arsitektur">BURSA ARSITEKTUR</a></li>
+      <li><a href="?blog=bursa" title="Bursa Arsitektur">BURSA ARSITEKTUR</a></li>
       <li><a href="?blog=blog-awal&menu=berita" title="Berita">BERITA</a></li>
     </ul>
   </nav>
@@ -120,6 +117,10 @@
         else if(($blog=="list-pdf-2") and ($isi==""))
         {
             include "list-pdf-2.php";
+        }
+        else if(($blog=="bursa") and ($isi==""))
+        {
+            include "bursa.php";
         }
         else if(($blog=="") and ($isi=="profil"))
         {
